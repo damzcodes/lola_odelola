@@ -1,3 +1,24 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* INDEX.html */
+
+.midnight-gradient {
+  background: rgb(44,14,104);
+background: -moz-linear-gradient(top, rgba(44,14,104,1) 30%, rgba(90,0,135,1) 73%);
+background: -webkit-linear-gradient(top, rgba(44,14,104,1) 30%,rgba(90,0,135,1) 73%);
+background: linear-gradient(to bottom, rgba(44,14,104,1) 30%,rgba(90,0,135,1) 73%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c0e68', endColorstr='#5a0087',GradientType=0 );
+}
+
+.f8-l {
+  @media screen and (min-width: 800px) {
+    font-size: 8rem;
+  }
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+}
