@@ -1,14 +1,18 @@
 class PostsController < ApplicationController
 
-  def show
-    @post = Post.find(params[:id])
-  end
-
   def tech_index
     @posts = Post.where(tech: true)
   end
 
-  def poem_index
+  def tech
+    @post = Post.where(tech: true).find(params[:id])
+  end
+
+  def poetry_index
     @posts = Post.where(poem: true)
+  end
+
+  def poem
+    @poem = Post.where(poem: true).find(params[:id])
   end
 end

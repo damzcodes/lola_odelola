@@ -7,10 +7,8 @@ Rails.application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
 
-  resources :posts, only: :show
-
   get 'tech' => 'posts#tech_index'
-  get 'poems' => 'posts#poem_index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'poetry' => 'posts#poetry_index'
+  get 'poetry/:id' => 'posts#poem'
+  get 'tech/:id' => 'posts#tech'
 end
