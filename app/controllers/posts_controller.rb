@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def tech_index
-    @posts = Post.where(tech: true)
+    @posts = Post.where(tech: true).order(created_at: :desc)
   end
 
   def tech
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def poetry_index
-    @posts = Post.where(poem: true)
+    @posts = Post.where(poem: true).order(created_at: :desc)
   end
 
   def poem
