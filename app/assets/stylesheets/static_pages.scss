@@ -14,11 +14,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c0e68', end
   }
 }
 
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
 #particles-js {
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  display: block !important;
   position: absolute;
+  vertical-align: bottom;
 }
