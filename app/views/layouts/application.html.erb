@@ -11,9 +11,8 @@
   </head>
 
   <body class="w-100 vh-100">
-    <% if !current_page?('/') %>
-      <%= render "partials/nav" %>
-    <% end %> 
+    <%= render "partials/nav" %>
     <%= yield %>
+    <%= render "partials/footer" %>
   </body>
 </html>
