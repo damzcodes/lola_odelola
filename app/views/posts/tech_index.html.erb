@@ -1,4 +1,5 @@
 
   <% @posts.each do |post| %>
     <a href= "/tech/<%= post.id %>" class= "link dim f1 avenir fw1 dib hover-red pa3 no-underline black"> <%= post.title %> </a>
+    <span class="f1 avenir fw1 dib pa3 black"> | </span>
   <% end %>
