@@ -1,6 +1,20 @@
 ActiveAdmin.register Admin do
   permit_params :email, :password, :password_confirmation
 
+  controller do
+    def create
+      super do |format|
+        redirect_to admin_admins_path and return if resource.valid?
+      end
+    end
+
+    def update
+      super do |format|
+        redirect_to admin_admins_path and return if resource.valid?
+      end
+    end
+  end
+
   index do
     selectable_column
     id_column

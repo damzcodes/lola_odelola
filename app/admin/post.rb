@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
 
-  permit_params :admin, :title, :tech, :poem, :body
+  permit_params :title, :tech, :poem, :body
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -15,5 +15,17 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
+  controller do
+    def create
+      super do |format|
+        redirect_to admin_posts_path and return if resource.valid?
+      end
+    end
 
+    def update
+      super do |format|
+        redirect_to admin_posts_path and return if resource.valid?
+      end
+    end
+  end
 end
