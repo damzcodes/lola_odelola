@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def hire_me
   end
+
+  def talks
+  end
 end
