@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   pool:
   timeout:
+  database: lola_odelola
 
 development:
   <<: *default
