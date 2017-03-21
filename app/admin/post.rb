@@ -15,17 +15,17 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-  controller do
-    def create
-      super do |format|
-        redirect_to admin_posts_path and return if resource.valid?
-      end
-    end
+  # controller do
+  #   def create
+  #     super do |format|
+  #       redirect_to admin_posts_path and return if resource.valid?
+  #     end
+  #   end
 
-    def update
-      super do |format|
-        redirect_to admin_posts_path and return if resource.valid?
-      end
-    end
-  end
+  #   def update
+  #     super do |format|
+  #       redirect_to admin_posts_path and return if resource.valid?
+  #     end
+  #   end
+  # end
 end

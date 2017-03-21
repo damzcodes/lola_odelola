@@ -1,0 +1,30 @@
+<article class="cf ph3 ph5-ns pv5 black avenir">
+  <div class="fn w-100-ns pr4-ns">
+    <h1 class="mb3 mt0 lh-title f1 dark-green">Events</h1>
+
+    <p class="f3 fw4"> Check out some of the events I've spoken at</p>
+  </div>
+
+  <div class="fn f3">
+    <h2 class="mb0">Upcoming Events</h2>
+    <% @events.upcoming(DateTime.now).each do |event| %>
+      <ul>
+        <li> <%= event.name %> </li>
+        <li> <%= event.topic %> </li>
+        <li> <%= event.date.strftime("%D") %></li>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="fn f3">
+    <h2 class="mb0">Past Events</h2>
+    <% @events.past(DateTime.now).each do |event| %>
+      <ul>
+        <li> <%= event.name %> </li>
+        <li> <%= event.topic %> </li>
+        <li> <%= event.date.strftime("%b %Y") %></li>
+      </ul>
+    <% end %>
+  </div>
+  
+</article>

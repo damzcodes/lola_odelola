@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get 'poetry' => 'posts#poetry_index'
   get 'poetry/:id' => 'posts#poem'
   get 'tech/:id' => 'posts#tech'
+
+  resources :events, only: [:index]
 end
