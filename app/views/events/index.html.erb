@@ -8,7 +8,7 @@
   <div class="">
     <div class="fn f3 fl-ns w-50-ns">
       <h2 class="mb0 pink">Upcoming Events</h2>
-      <% @events.upcoming.order(date: :desc).each do |event| %>
+      <% @events.upcoming.order(date: :asc).each do |event| %>
         <ul class="list">
           <li class="b"> <%= event.name %> </li>
           <li class="i">
@@ -28,7 +28,7 @@
 
     <div class="fn f3 fl-ns w-50-ns bl-ns bw1 b--black">
       <h2 class="mb0 pl4-ns light-purple">Past Events</h2>
-      <% @events.past.order(date: :desc).each do |event| %>
+      <% @events.past.order(date: :asc).each do |event| %>
         <ul class="list">
           <li class="b"> <%= event.name %> </li>
           <li class="i">
