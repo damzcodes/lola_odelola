@@ -10,7 +10,16 @@
     <% @events.upcoming.each do |event| %>
       <ul class="list">
         <li class="b"> <%= event.name %> </li>
-        <li class="i"> <%= event.topic %> </li>
+        <li class="i">
+          <% if event.talk? %>
+            Talk:
+          <% elsif event.workshop? %>
+            Workshop:
+          <% elsif event.panel? %>
+            Panel:
+          <% end %>
+          <%= event.topic %>
+        </li>
         <li> <%= event.date.strftime("%d %b %Y") %></li>
       </ul>
     <% end %>
@@ -21,7 +30,16 @@
     <% @events.past.each do |event| %>
       <ul class="list">
         <li class="b"> <%= event.name %> </li>
-        <li class="i"> <%= event.topic %> </li>
+        <li class="i">
+          <% if event.talk? %>
+            Talk:
+          <% elsif event.workshop? %>
+            Workshop:
+          <% elsif event.panel? %>
+            Panel:
+          <% end %>
+          <%= event.topic %>
+        </li>
         <li> <%= event.date.strftime("%b %Y") %></li>
       </ul>
     <% end %>

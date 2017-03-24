@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
 
-  permit_params :topic, :name, :talk, :workshop, :date
+  permit_params :name, :topic, :talk, :workshop, :panel, :date
 
 end
