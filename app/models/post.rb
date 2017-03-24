@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   validates :body, presence: true
 
   
-  self.per_page = 2
+  self.per_page = 30
 end
