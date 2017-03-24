@@ -1,48 +1,50 @@
 <article class="cf ph3 ph5-ns pv5 black avenir">
-  <div class="fn w-100-ns pr4-ns">
-    <h1 class="mb3 mt0 lh-title f1 dark-red">Events</h1>
+  <div class="fn fl-ns w-50-ns pr4-ns">
+    <h1 class="mb3 mt0 lh-title f1 gray">Events</h1>
 
-    <p class="f3 fw4"> Check out some of the events I've spoken at</p>
+    <p class="f3 fw4"> These are some of the events I've spoken at or events I've got coming up. There's more information on my <%= link_to "talks & workshops", talks_path, class: "link" %> page.</p>
   </div>
 
-  <div class="fn f3">
-    <h2 class="mb0">Upcoming Events</h2>
-    <% @events.upcoming.each do |event| %>
-      <ul class="list">
-        <li class="b"> <%= event.name %> </li>
-        <li class="i">
-          <% if event.talk? %>
-            Talk:
-          <% elsif event.workshop? %>
-            Workshop:
-          <% elsif event.panel? %>
-            Panel:
-          <% end %>
-          <%= event.topic %>
-        </li>
-        <li> <%= event.date.strftime("%d %b %Y") %></li>
-      </ul>
-    <% end %>
-  </div>
+  <div class="fn fl-ns w-50-ns">
+    <div class="fn f3 fl-ns w-50-ns">
+      <h2 class="mb0 pink">Upcoming Events</h2>
+      <% @events.upcoming.each do |event| %>
+        <ul class="list">
+          <li class="b"> <%= event.name %> </li>
+          <li class="i">
+            <% if event.talk? %>
+              Talk:
+            <% elsif event.workshop? %>
+              Workshop:
+            <% elsif event.panel? %>
+              Panel:
+            <% end %>
+            <%= event.topic %>
+          </li>
+          <li> <%= event.date.strftime("%d %b %Y") %></li>
+        </ul>
+      <% end %>
+    </div>
 
-  <div class="fn f3">
-    <h2 class="mb0">Past Events</h2>
-    <% @events.past.each do |event| %>
-      <ul class="list">
-        <li class="b"> <%= event.name %> </li>
-        <li class="i">
-          <% if event.talk? %>
-            Talk:
-          <% elsif event.workshop? %>
-            Workshop:
-          <% elsif event.panel? %>
-            Panel:
-          <% end %>
-          <%= event.topic %>
-        </li>
-        <li> <%= event.date.strftime("%b %Y") %></li>
-      </ul>
-    <% end %>
+    <div class="fn f3 fl-ns w-50-ns bl bw1 b--black">
+      <h2 class="mb0 pl4-ns light-purple">Past Events</h2>
+      <% @events.past.each do |event| %>
+        <ul class="list">
+          <li class="b"> <%= event.name %> </li>
+          <li class="i">
+            <% if event.talk? %>
+              Talk:
+            <% elsif event.workshop? %>
+              Workshop:
+            <% elsif event.panel? %>
+              Panel:
+            <% end %>
+            <%= event.topic %>
+          </li>
+          <li> <%= event.date.strftime("%b %Y") %></li>
+        </ul>
+      <% end %>
+    </div>
   </div>
   
 </article>
