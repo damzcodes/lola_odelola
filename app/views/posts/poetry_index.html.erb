@@ -1,8 +1,11 @@
-<div class="vh-75-ns">
+<div class="vh-75-ns ph3 ph5-ns">
   <% @posts.each do |post| %>
     <a href= "/poetry/<%= post.id %>" class= "link dim f1-ns f3 avenir fw1-ns dib hover-red pv3 ph2 no-underline black fw4"> <%= post.title %> </a>
     <span class="f1-ns f3 avenir fw1 dib black"> | </span>
   <% end %>
 </div>
 
-<%#= will_paginate @posts %>
+<div class="fw3 avenir black ph3 ph5-ns">
+  <%= will_paginate @posts, previous_label: "<< Previous", next_label: "Next >>"%>
+  <%= page_entries_info @posts %>
+</div>
