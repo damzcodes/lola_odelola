@@ -1,14 +1,14 @@
 <article class="cf ph3 ph5-ns pv5 black avenir">
-  <div class="fn fl-ns w-50-ns pr4-ns">
+  <div class=" pr4-ns">
     <h1 class="mb3 mt0 lh-title f1 gray">Events</h1>
 
     <p class="f3 fw4"> These are some of the events I've spoken at or events I've got coming up. There's more information on my <%= link_to "talks & workshops", talks_path, class: "link" %> page.</p>
   </div>
 
-  <div class="fn fl-ns w-50-ns">
+  <div class="">
     <div class="fn f3 fl-ns w-50-ns">
       <h2 class="mb0 pink">Upcoming Events</h2>
-      <% @events.upcoming.each do |event| %>
+      <% @events.upcoming.order(date: :desc).each do |event| %>
         <ul class="list">
           <li class="b"> <%= event.name %> </li>
           <li class="i">
@@ -26,9 +26,9 @@
       <% end %>
     </div>
 
-    <div class="fn f3 fl-ns w-50-ns bl bw1 b--black">
+    <div class="fn f3 fl-ns w-50-ns bl-ns bw1 b--black">
       <h2 class="mb0 pl4-ns light-purple">Past Events</h2>
-      <% @events.past.each do |event| %>
+      <% @events.past.order(date: :desc).each do |event| %>
         <ul class="list">
           <li class="b"> <%= event.name %> </li>
           <li class="i">
