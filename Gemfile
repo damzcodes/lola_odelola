@@ -16,9 +16,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'pg'
-gem 'devise'
-gem 'activeadmin', github: 'activeadmin'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+# gem 'devise'
+# gem 'activeadmin', github: 'activeadmin'
+# gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'will_paginate', '~> 3.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
